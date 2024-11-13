@@ -1,12 +1,13 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-import { Script } from "forge-std/Script.sol";
-import { EzEthToEthExchangeRateAdapter } from "src/exchange-rate-adapters/EzEthToEthExchangeRateAdapter.sol";
-import { RsEthToEthExchangeRateAdapter } from "src/exchange-rate-adapters/RsEthToEthExchangeRateAdapter.sol";
-import { RswEthToEthExchangeRateAdapter } from "src/exchange-rate-adapters/RswEthToEthExchangeRateAdapter.sol";
-import { SwEthToEthExchangeRateAdapter } from "src/exchange-rate-adapters/SwEthToEthExchangeRateAdapter.sol";
-import { WeEthToEthExchangeRateAdapter } from "src/exchange-rate-adapters/WeEthToEthExchangeRateAdapter.sol";
+import {Script} from "forge-std/Script.sol";
+import {EzEthToEthExchangeRateAdapter} from "src/exchange-rate-adapters/EzEthToEthExchangeRateAdapter.sol";
+import {RsEthToEthExchangeRateAdapter} from "src/exchange-rate-adapters/RsEthToEthExchangeRateAdapter.sol";
+import {RswEthToEthExchangeRateAdapter} from "src/exchange-rate-adapters/RswEthToEthExchangeRateAdapter.sol";
+import {SwEthToEthExchangeRateAdapter} from "src/exchange-rate-adapters/SwEthToEthExchangeRateAdapter.sol";
+import {WeEthToEthExchangeRateAdapter} from "src/exchange-rate-adapters/WeEthToEthExchangeRateAdapter.sol";
+import {HEthToEthExchangeRateAdapter} from "src/exchange-rate-adapters/HEthToEthExchangeRateAdapter.sol";
 
 contract DeployScript is Script {
     function run() public {
@@ -21,5 +22,6 @@ contract DeployScript is Script {
         new RswEthToEthExchangeRateAdapter();
         new SwEthToEthExchangeRateAdapter();
         new WeEthToEthExchangeRateAdapter();
+        new HEthToEthExchangeRateAdapter();
     }
 }
